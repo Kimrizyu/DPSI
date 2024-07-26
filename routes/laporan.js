@@ -4,6 +4,8 @@ const Penjualan = require('../models/penjualan');
 const Barang_rusak = require('../models/barang_rusak');
 var router = express.Router();
 
+
+//hanya manager yang dapat dapat melihat penjualan, barang rusak dan meng acc barang rusak
 router.get('/penjualan',authenticate, authorize(['manager']), async (req, res, next) => {
     try {
         const Barangs = await Penjualan.findAll();
