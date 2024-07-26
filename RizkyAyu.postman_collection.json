@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "fe162921-3fc8-413a-a974-edfe3d9104dd",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37247905"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"kasir\", \"password\" : \"kasir\", \"role\" : \"kasir\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app/auth/register",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"kasir\", \"password\" : \"kasir\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app/auth/login",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post barang",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiZ3VkYW5nIiwiaWF0IjoxNzIxOTgzNDc5LCJleHAiOjE3MjE5ODcwNzl9.yxnnbuQh3ohDXFsidaZN8Wppupbc36QPWS2U-27PX70",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"Nama_barang\" : \"Biskuat\", \"Jumlah_barang\" : 500 , \"Harga\" : 3500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app/barang",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get barang",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiZ3VkYW5nIiwiaWF0IjoxNzIxOTgzNDc5LCJleHAiOjE3MjE5ODcwNzl9.yxnnbuQh3ohDXFsidaZN8Wppupbc36QPWS2U-27PX70",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"Nama_barang\" : \"Milkkita\", \"Jumlah_barang\" : 500 , \"Harga\" : 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app/barang",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up barang",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiZ3VkYW5nIiwiaWF0IjoxNzIxOTgzNDc5LCJleHAiOjE3MjE5ODcwNzl9.yxnnbuQh3ohDXFsidaZN8Wppupbc36QPWS2U-27PX70",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"Nama_barang\" : \"Biskuat\", \"Jumlah_barang\" : 500 , \"Harga\" : 3500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app/barang/3:ID_barang",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"barang",
+						"3:ID_barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del barang",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiZ3VkYW5nIiwiaWF0IjoxNzIxOTgzNDc5LCJleHAiOjE3MjE5ODcwNzl9.yxnnbuQh3ohDXFsidaZN8Wppupbc36QPWS2U-27PX70",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"Nama_barang\" : \"Biskuat\", \"Jumlah_barang\" : 500 , \"Harga\" : 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app/barang/3:ID_barang",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"barang",
+						"3:ID_barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "laporan barangrusak",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiZ3VkYW5nIiwiaWF0IjoxNzIxOTgzNDc5LCJleHAiOjE3MjE5ODcwNzl9.yxnnbuQh3ohDXFsidaZN8Wppupbc36QPWS2U-27PX70",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"ID_barang\" : 1, \"deskripsi\" : \"penyok\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app/barang/barangrusak",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"barang",
+						"barangrusak"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jual barang",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoia2FzaXIiLCJpYXQiOjE3MjE5ODM3NDUsImV4cCI6MTcyMTk4NzM0NX0.DeF75lvuxKy5en-yyHN3KnCLmSLoKJ6IGKEzAtu1kGk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"ID_barang\" : 1, \"dijual\" : 300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app/barang/Jual",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"barang",
+						"Jual"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get laporanpenjualan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoibWFuYWdlciIsImlhdCI6MTcyMTk4MzgwNCwiZXhwIjoxNzIxOTg3NDA0fQ.76f55U2tKNPXkm291GhQo3khZK4AtFw4i-JEIQlvP5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"ID_barang\" : 1, \"dijual\" : 300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app/laporan/penjualan",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"laporan",
+						"penjualan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get laporanbarangrusak",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoibWFuYWdlciIsImlhdCI6MTcyMTk4MDYwNCwiZXhwIjoxNzIxOTg0MjA0fQ.VWGCm_688nUGFGKKrw4Ge123rzswL8XT1awP0cTBxKI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"ID_barang\" : 1, \"dijual\" : 300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app//laporan/barangruasak",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"laporan",
+						"barangruasak"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "approvelaporan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoibWFuYWdlciIsImlhdCI6MTcyMTk4MDYwNCwiZXhwIjoxNzIxOTg0MjA0fQ.VWGCm_688nUGFGKKrw4Ge123rzswL8XT1awP0cTBxKI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://pengelolaan-3199f5037-kimrizyus-projects.vercel.app/laporan/barangrusak/1:ID_laporan",
+					"protocol": "https",
+					"host": [
+						"pengelolaan-3199f5037-kimrizyus-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"laporan",
+						"barangrusak",
+						"1:ID_laporan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
